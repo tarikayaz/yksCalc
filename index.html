@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+  <style>
+
+body {
+  background:#9a9494;
+  font-size: 12px;
+}
+
+body, button, input {
+  font-family: 'Righteous', cursive;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.background {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 0 1 3000px;
+  margin: auto;
+  padding: 10px;
+}
+
+.screen {
+  position: relative;
+  background: #3e3e3e;
+  border-radius: 15px;
+}
+
+.screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.app-title {
+  display: flex;
+  /*flex-direction: column;*/
+  justify-content: center;
+  align-items: center;
+  color: #33d9b2;f;
+  font-size: 26px;
+  text-transform: uppercase;
+  border-left: 4px solid #218c74;
+  padding: 10px;
+}
+.app-text{
+  display: flex;
+  /*flex-direction: column;*/
+  justify-content: center;
+  align-items: center;
+  color: #33d9b2;f;
+  font-size: 26px;
+  text-transform: uppercase;
+  border-left: 4px solid #218c74;
+  padding: 10px;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control-green {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #218c74;
+  color: #218c74;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color .2s;
+}
+.app-form-control-red {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #cc1313;
+  color: #cc1313;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.app-form-control-red::placeholder {
+  color: #ddd;
+}
+.app-form-control-green::placeholder {
+  color: #ddd;
+}
+
+.app-form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.app-form-button {
+  background: none;
+  border: none;
+  color: #33d9b2;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.app-form-button:hover {
+  color: #218c74;
+}
+
+.showdata{
+  text-align: left;
+  color: white;
+  font-size: 1.2rem;
+  padding-top: -10px;
+  padding-bottom: 10px;
+}
+.row {
+  white-space: nowrap;
+  width: 30%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+
+  color: #ddd;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  transition: border-color .2s;
+}
+
+.row > div {
+  width: 200px;
+  display: inline-block;
+}
+  </style>
+  <style type="same-row">
+    #element1 {display:inline-block; width:45%; padding:10px}
+    #element2 {display:inline-block; width:45%; padding:10px}
+  </style>
+</head>
+<body>
+
+
+
+
+
+<div class="background">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-body">
+        <div class="screen-body-item left">
+          <div class="app-title">
+            <div class="animated infinite pulse">
+              YKS <br> PUAN <br> SIRALAMA <br> Sayısal<br> (şuan için)
+            </div>
+          </div>
+        </div>
+        <div class="screen-body-item">
+          <div class="app-form">
+            <form >
+              <input type="radio" name="puanturu" id="say">
+              <label class="app-form-control-green" for="male">SAYISAL</label>
+              <input type="radio" name="puanturu" id="ea">
+              <label class="app-form-control-green" for="female">Eşit ***rlık</label>
+            </form>
+            <div class="app-form">
+              <p></p>
+            </div>
+            <div class="row">
+                 <t  class="app-form-group">OBP................:</t>
+                 <input type="number" class="app-form-control-green" placeholder="OBP" id="obp">
+            </div>
+            <div class="row">
+              <t class="">TÜRKÇE..................:</t>
+              <input  type="number"  class="app-form-control-green"   placeholder="DOĞRU" id="tr_d">
+              <input  type="number"  class="app-form-control-red"   placeholder="YANLIŞ" id="tr_y">
+            </div>
+             <div class="app-form-group row">
+               <t class="app-form-group">SOSYAL..................:</t>
+               <input  type="number"  class="app-form-control-green"   placeholder="DOĞRU" id="sos_d">
+               <input  type="number"  class="app-form-control-red"   placeholder="YANLIŞ" id="sos_y">
+            </div>
+            <div class="app-form-group row">
+              <t class="app-form-group">MATEMATİK.............:</t>
+              <input  type="number"  class="app-form-control-green"   placeholder="DOĞRU" id="mat_d">
+              <input  type="number"  class="app-form-control-red"   placeholder="YANLIŞ" id="mat_y">
+            </div><div class="app-form-group row">
+              <t class="app-form-group ">FEN........................:</t>
+              <input  type="number"  class="app-form-control-green"   placeholder="DOĞRU" id="fen_d">
+              <input  type="number"  class="app-form-control-red"   placeholder="YANLIŞ" id="fen_y">
+            </div>
+
+          </div>
+
+      </div>
+      <div class="screen-body-item">
+        <div class="app-form">
+
+          <div class="app-form-group row">
+            <t class="app-form-group">MATEMATİK..........:</t>
+            <input  type="number"  class="app-form-control-green"   placeholder="DOĞRU" id="mat2_d">
+            <input  type="number"  class="app-form-control-red"   placeholder="YANLIŞ" id="mat2_y">
+          </div>
+          <div class="app-form-group row">
+            <t class="app-form-group">FİZİK....................:</t>
+            <input  type="number"  class="app-form-control-green"   placeholder="DOĞRU" id="fizik_d">
+            <input  type="number"  class="app-form-control-red"   placeholder="YANLIŞ" id="fizik_y">
+          </div>
+           <div class="app-form-group row">
+             <t class="app-form-group">KİMYA..................:</t>
+             <input  type="number"  class="app-form-control-green"   placeholder="DOĞRU" id="kim_d">
+             <input  type="number"  class="app-form-control-red"   placeholder="YANLIŞ" id="kim_y">
+          </div>
+          <div class="app-form-group row">
+            <t class="app-form-group">BİYOLOJİ..............:</t>
+            <input  type="number"  class="app-form-control-green"   placeholder="DOĞRU" id="biyo_d">
+            <input  type="number"  class="app-form-control-red"   placeholder="YANLIŞ" id="biyo_y">
+          </div>
+          <div >
+            <input type="button" name="" value="hesapla" class="app-form-button" onclick="hesapla()">
+          </div>
+        </div>
+      </div>
+
+
+  </div>
+      <div style="display:none;" id="showData" class="app-text">
+
+              <div  class="app-form-group">
+                <p id="tyt_puan">       TYT PUANINIZ:...........................:</p>
+                <p id="ayt_puan">       AYT PUANINIZ:...........................:</p>
+
+             </div>
+     </div>
+   </div>
+   </div>
+
+  </div>
+</div>
+
+<script>
+
+const hesapla = () =>{
+    document.getElementById('showData').style.display = "block";
+  let obp = document.getElementById('obp').value;
+  let tr = document.getElementById('tr').value;
+  let sos = document.getElementById('sos').value;
+  let mat1 = document.getElementById('mat1').value;
+  let fen = document.getElementById('fen').value;
+  let mat2 = document.getElementById('mat2').value;
+  let fizik = document.getElementsById('fizik').value;
+  let kimya = document.getElementById('kim').value;
+  let biyoloji  = document.getElementById('biyoloji').value;
+  let sonuc = "";
+
+
+  let totalSonuc = parseFloat(obp)
+                    + parseFloat(tr)
+                    + parseFloat(sos)
+                    + parseFloat(mat1)
+                    + parseFloat(fen);
+
+
+
+  debugger;
+
+  if(perc <= 100  && perc >= 80){
+    grades = 'A';
+  }else if(perc <= 79  && perc >= 60){
+     grades = 'B';
+  }else if(perc <= 59  && perc >= 40){
+     grades = 'C';
+  }else{
+     grades = 'F';
+  }
+
+  if(perc >= 39.5){
+    document.getElementById('showData').innerHTML = ` Out of 400 your total is  ${totalGrades} and percentage is ${perc}%. <br> Your grade is ${grades}. You are Pass. `
+  }
+  else{
+    document.getElementById('showData').innerHTML = ` Out of 400 your total is  ${totalGrades} and percentage is ${perc}%. <br> Your grade is ${grades}. You are Fail. `
+  }
+
+
+}
+
+
+</script>
+
+</body>
+</html>
